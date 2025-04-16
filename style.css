@@ -579,3 +579,102 @@ footer p {
     opacity: 1; /* Darken the background slightly on hover */
 }
 
+/* Tablets (portrait) and below */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .feature-box, .category-box, .testimonial, .step {
+        max-width: 90%;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .features, .course-categories, .testimonials, .how-it-works, .courses-section {
+        padding: 2rem 1rem;
+    }
+
+    .feature-box, .category-box, .testimonial, .step, .course-card {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .courses-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta button {
+        width: 100%;
+    }
+}
+
+/* Small mobile (<= 480px) */
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text p {
+        font-size: 0.95rem;
+    }
+
+    .hero img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    nav button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .feature-box img, .category-box img {
+        height: 150px;
+    }
+
+    .course-card img {
+        height: 180px;
+    }
+}
