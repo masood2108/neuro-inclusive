@@ -1,0 +1,581 @@
+/* General Settings */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f9fc;
+    color: #2c3e50;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #005f73;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #e0f4ff;
+}
+
+nav button {
+    background-color: #ffffff;
+    color: #005f73;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav button:hover {
+    background-color: #d8f3ff;
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(to right, #d0f4de, #fcd5ce);
+    gap: 2rem;
+    animation: fadeIn 1s ease-out;
+}
+
+.hero img {
+    max-width: 450px;
+    width: 100%;
+    border-radius: 20px;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+.hero-text {
+    max-width: 500px;
+    text-align: center;
+    animation: slideInUp 1s ease-out;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: #023047;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text button {
+    background-color: #005f73;
+    color: #fff;
+    padding: 12px 26px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-text button:hover {
+    background-color: #003845;
+    transform: scale(1.05);
+}
+
+/* Why Us Section */
+.why-us {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #fff;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.why-us h2 {
+    font-size: 2rem;
+    color: #0077aa;
+    margin-bottom: 1rem;
+}
+
+.why-us p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.feature-box {
+    width: 320px;
+    background-color: #edf6f9;
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.feature-box:hover {
+    transform: scale(1.05);
+}
+
+.feature-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.feature-box h2 {
+    font-size: 1.5rem;
+    color: #0077aa;
+    margin-bottom: 0.75rem;
+}
+
+.feature-box p {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* Course Categories */
+.course-categories {
+    padding: 3rem 2rem;
+    background-color: #f9fcff;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+.course-categories h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #005f73;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.category-box {
+    width: 220px;
+    background-color: #e6f7ff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+    opacity: 0;
+    transform: translateY(40px);
+    transition: transform 0.3s;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.category-box img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.category-box h3 {
+    font-size: 1.2rem;
+    color: #0077aa;
+}
+
+.category-box:hover {
+    transform: scale(1.05);
+}
+
+/* How It Works */
+.how-it-works {
+    padding: 4rem 2rem;
+    background-color: #fff;
+    text-align: center;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.how-it-works h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #0077aa;
+}
+
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.step {
+    background-color: #f0f8ff;
+    padding: 2rem;
+    border-radius: 16px;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    transform: translateY(40px);
+    transition: transform 0.3s;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.step span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #005f73;
+}
+
+.step p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #444;
+}
+
+/* Testimonials */
+.testimonials {
+    background-color: #e6f0f3;
+    padding: 4rem 2rem;
+    text-align: center;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    color: #005f73;
+    margin-bottom: 2rem;
+}
+
+.testimonial-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.testimonial {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.07);
+    width: 320px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: transform 0.3s;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.testimonial p {
+    font-style: italic;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.testimonial h4 {
+    font-weight: 600;
+    color: #0077aa;
+}
+
+/* Call to Action */
+.cta {
+    padding: 3rem 2rem;
+    background-color: #0077aa;
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+.cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta button {
+    background-color: #ffffff;
+    color: #0077aa;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.cta button:hover {
+    background-color: #d8f3ff;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #005f73;
+    color: #fff;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .feature-box, .category-box, .testimonial, .step {
+        width: 100%;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Courses Section */
+.courses-section {
+    padding: 4rem 2rem;
+    background-color: #f4f9fc;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+.courses-section .section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #005f73;
+    margin-bottom: 1rem;
+}
+
+.courses-section .section-subtitle {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Courses Grid */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Course Card */
+/* Course Card */
+.course-card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensures the rounded corners are maintained during hover */
+    position: relative;
+    margin-top: 20px; /* Adds a little space between cards */
+}
+
+.course-card:hover {
+    transform: translateY(-15px); /* Slightly more pronounced hover effect */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Image Styling */
+.course-card img {
+    width: 100%;
+    height: 220px; /* Slightly larger image height for better balance */
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Title Styling */
+.course-card h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #0077aa;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.course-card h3:hover {
+    color: #005f73; /* Darker shade on hover */
+}
+
+/* Paragraph Styling */
+.course-card p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.course-card:hover p {
+    color: #555; /* Slight color change on hover */
+}
+
+/* Button Styling */
+.course-card button {
+    background-color: #005f73;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s ease;
+    margin-top: 1rem; /* Space between the text and button */
+}
+
+.course-card button:hover {
+    background-color: #003845; /* Darker shade on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* Optional - Add an overlay effect for interactivity */
+.course-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 16px;
+}
+
+.course-card:hover::before {
+    opacity: 1; /* Darken the background slightly on hover */
+}
+

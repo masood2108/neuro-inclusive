@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeuroLearn - Inclusive Learning for All</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">🧠 NeuroLearn</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Courses</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <button onclick="location.href='login.html'">Login</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="hero.png" alt="Neurodiverse Learning" />
+    <div class="hero-text">
+      <h1>Empowering Neurodiverse Minds</h1>
+      <p>Personalized learning paths for autism and dyslexia, built with love and AI.</p>
+      <button onclick="location.href='signup.html'">Get Started</button>
+    </div>
+  </section>
+
+  <!-- Why Neuro-Inclusive -->
+  <section class="why-us">
+    <h2>Why Neuro-Inclusive Learning?</h2>
+    <p>Every mind is unique. Our platform is designed to support visual, auditory, and kinesthetic learning styles, especially tailored for autistic and dyslexic learners. With friendly visuals, focused content, and ML-driven personalization, learning becomes joyful.</p>
+  </section>
+
+  <!-- Features / Courses -->
+  <section class="features">
+    <div class="feature-box">
+      <img src="kids.png" alt="Courses for Kids" />
+      <h2>Courses for Kids</h2>
+      <p>Interactive, friendly content designed with care.</p>
+    </div>
+    <div class="feature-box">
+      <img src="adults.png" alt="Courses for Adults" />
+      <h2>Courses for Adults</h2>
+      <p>Build skills at your pace with pattern-enhanced learning.</p>
+    </div>
+    <div class="feature-box">
+      <img src="ml.png" alt="AI Enhanced Learning" />
+      <h2>ML-Powered Learning</h2>
+      <p>Smart course recommendations using ML models based on your patterns.</p>
+    </div>
+  </section>
+
+<!-- Course Categories -->
+<section class="course-categories">
+    <h2>Explore Learning Paths</h2>
+    <div class="categories">
+      <div class="category-box">
+        <img src="read.svg" alt="Reading Skills">
+        <h3>Reading Skills</h3>
+      </div>
+      <div class="category-box">
+        <img src="math.svg" alt="Math with Visual Aids">
+        <h3>Visual Math</h3>
+      </div>
+      <div class="category-box">
+        <img src="life.svg" alt="Life Skills">
+        <h3>Life Skills</h3>
+      </div>
+      <div class="category-box">
+        <img src="social.svg" alt="Social Skills">
+        <h3>Social Skills</h3>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Courses Section -->
+  <section class="courses-section">
+    <h2 class="section-title">Explore Our Courses</h2>
+    <p class="section-subtitle">Personalized courses designed for visual, auditory, and neurodiverse learners.</p>
+    
+    <div class="courses-grid">
+      <div class="course-card">
+        <img src="life.png" alt="Visual Learning Course">
+        <h3>Visual Learning Boost</h3>
+        <p>Engage with diagrams, colors, and videos tailored for visual learners.</p>
+        <span class="tag visual">Visual</span>
+        <button>Start Learning</button>
+      </div>
+  
+      <div class="course-card">
+        <img src="soft.png" alt="Auditory Course">
+        <h3>Sound-Based Reading</h3>
+        <p>Learn through music, rhythm, and phonetics for auditory support.</p>
+        <span class="tag auditory">Auditory</span>
+        <button>Start Learning</button>
+      </div>
+  
+      <div class="course-card">
+        <img src="math.png" alt="Math Course">
+        <h3>Math Made Easy</h3>
+        <p>Fun and logic-based math exercises for all kinds of thinkers.</p>
+        <span class="tag math">Math</span>
+        <button>Start Learning</button>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <!-- How It Works -->
+  <section class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <span>1</span>
+        <p>Sign up and choose your profile (child/adult)</p>
+      </div>
+      <div class="step">
+        <span>2</span>
+        <p>Take a friendly onboarding test to analyze your pattern</p>
+      </div>
+      <div class="step">
+        <span>3</span>
+        <p>Start learning with AI-tailored content just for you</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>What Our Users Say</h2>
+    <div class="testimonial-boxes">
+      <div class="testimonial">
+        <p>"My son is finally enjoying learning. The platform understands his pace and needs."</p>
+        <h4>- Parent of a 9-year-old</h4>
+      </div>
+      <div class="testimonial">
+        <p>"I struggled with reading for years. This has changed how I learn, forever."</p>
+        <h4>- Sarah, Adult Learner with Dyslexia</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <h2>Ready to start your learning journey?</h2>
+    <button onclick="location.href='signup.html'">Join NeuroLearn Now</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 NeuroLearn. Built with care for every mind.</p>
+  </footer>
+
+  <!-- Scroll Reveal Script -->
+  <script>
+    const boxes = document.querySelectorAll('.feature-box, .category-box, .step, .testimonial');
+    const triggerBottom = window.innerHeight * 0.9;
+    window.addEventListener('scroll', checkBoxes);
+
+    function checkBoxes() {
+      boxes.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+          box.style.opacity = 1;
+          box.style.transform = 'translateY(0)';
+        }
+      });
+    }
+    checkBoxes();
+    const elements = document.querySelectorAll('.feature-box, .category-box, .step, .testimonial');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+          observer.unobserve(entry.target); // Trigger once
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    elements.forEach(el => observer.observe(el));
+    elements.forEach((el, i) => {
+      el.style.transitionDelay = `${i * 100}ms`;
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
